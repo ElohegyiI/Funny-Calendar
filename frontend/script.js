@@ -79,7 +79,7 @@ function loadEvent() {
 
                 section.insertAdjacentHTML("beforeend", 
                 `<div class="card">
-                    <time datetime="YYYY">${year}<time>
+                    <time datetime="YYYY">${thisYear}<time>
                     <time datetime="MM">${monthName}</time>
                     <time datetime="DD">${i+1}<time>
                 </div>`)
@@ -90,7 +90,7 @@ function loadEvent() {
             for (let i = 0; i < 30; i++); {
                 section.insertAdjacentHTML("beforeend", 
                 `<div class="card">
-                    <time datetime="YYYY">${year}</time>
+                    <time datetime="YYYY">${thisYear}</time>
                     <time datetime="MM">${monthName}</time>
                     <time datetime="DD">${i+1}</time>
                 </div>`) 
