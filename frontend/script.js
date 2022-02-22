@@ -1,6 +1,6 @@
 function loadEvent() {
 
-    let funCal = document.getElementById('root');
+    
 
     let months = [
         {
@@ -57,14 +57,17 @@ function loadEvent() {
     
         let thisYear = 2022;
 
-        funCal.insertAdjacentHTML("beforeend", `<section id="${months.name}</section`)
+        let funCal = document.getElementById('root');
 
-        let section = document.getElementById(months.name);
+        funCal.insertAdjacentHTML("beforeend", `<section id="${months.name}"</section`)
+
+        let div = document.getElementById(months.name);
+        document.getElementById("root").appendChild('div')
 
         let monthName = months.name;
 
-        if (months.days === 31) {
-            for (let i = 0; i < 31; i++); {
+        /*if (months.days === 31) {
+            for (let i = 0; i < 31; i++) {
                 
                 section.insertAdjacentHTML("beforeend", 
                 `<div class="card">
@@ -85,9 +88,9 @@ function loadEvent() {
                 </div>`)
                 }
             }
-            } else (months.days === 30); {
+            } else /*(months.days === 30);{
 
-            for (let i = 0; i < 30; i++); {
+            for (let i = 0; i < 30; i++) {
                 section.insertAdjacentHTML("beforeend", 
                 `<div class="card">
                     <time datetime="YYYY">${thisYear}</time>
@@ -96,7 +99,7 @@ function loadEvent() {
                 </div>`) 
                 }
 
-        }
+        }*/
     }
 }        
 
