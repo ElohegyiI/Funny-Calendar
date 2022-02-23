@@ -59,29 +59,41 @@ function loadEvent() {
         sect.setAttribute('id', monthsThisYear.name)
         document.getElementById('root').appendChild(sect)
 
+        
         let division = document.createElement('div')
-        division.className = 'card'
+        division.className = 'cards'
         document.getElementById('root').appendChild(sect).appendChild(division)
+        
+        for (let i = 1; i <= 31; i++) {
             
-            if (months.days = 31)
-                for (let i = 0; i = 31; i++) {
-                    division.insertAdjacentHTML("beforebegin", `
-                    <time datetime="YYYY">2022</time>
-                    <time datetime="MM">${monthsThisYear.name}</time>
-                    <time datetime="DD">${i+1}</time>
-                    </div>`)
+                let card = document.createElement('card')
+                card.className = 'card'
+                document.getElementById('root').appendChild(sect).appendChild(division).appendChild(card)
+                division.insertAdjacentHTML("beforebegin", `<div class="card">
+                        <time datetime="YYYY">2022</time>
+                        <time datetime="MM">${monthsThisYear.name}</time>
+                        <time datetime="DD">${i}</time>
+                        </div>`)
+        
+            if (months.days <= 28) {
+                
+                for (let i = 1; i <= 28; i++) {
+                    
+                division.insertAdjacentHTML("beforebegin", `<div class="card">
+                        <time datetime="YYYY">2022</time>
+                        <time datetime="MM">${monthsThisYear.name}</time>
+                        <time datetime="DD">${i}</time>
+                        </div>`)
                 }
-            
-            /*} elseif (months.days = 28) {
-
-            }*/
-
-
+                
+            }            
+        }
+    }
 
 
             
       
                 console.log(monthsThisYear) 
-    }
+    
 }
 window.addEventListener("load", loadEvent)
