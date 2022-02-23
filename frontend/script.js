@@ -1,7 +1,5 @@
 function loadEvent() {
 
-    
-
     let months = [
         {
             "name": "January",
@@ -53,52 +51,37 @@ function loadEvent() {
         }
     ];
 
-    for (const monthThisYear of months) {
-    
-        let thisYear = 2022;
+    for (const monthsThisYear of months) {
 
-        let funCal = document.getElementById('root');
+        let rootElement = document.getElementById('root')
 
-        funCal.insertAdjacentHTML("beforeend", `<section id="${months.name}"</section`)
+        let sect = document.createElement('section')
+        sect.setAttribute('id', monthsThisYear.name)
+        document.getElementById('root').appendChild(sect)
 
-        let div = document.getElementById(months.name);
-        document.getElementById("root").appendChild('div')
-
-        let monthName = months.name;
-
-        /*if (months.days === 31) {
-            for (let i = 0; i < 31; i++) {
-                
-                section.insertAdjacentHTML("beforeend", 
-                `<div class="card">
-                    <time datetime="YYYY">${thisYear}</time>
-                    <time datetime="MM">${monthName}</time>
+        let division = document.createElement('div')
+        division.className = 'card'
+        document.getElementById('root').appendChild(sect).appendChild(division)
+            
+            if (months.days = 31)
+                for (let i = 0; i = 31; i++) {
+                    division.insertAdjacentHTML("beforebegin", `
+                    <time datetime="YYYY">2022</time>
+                    <time datetime="MM">${monthsThisYear.name}</time>
                     <time datetime="DD">${i+1}</time>
-                 </div>`)
-                
-            } elseif (months.days === 28); { 
-    
-            for (let i = 0; i < 28; i++) {
-
-                section.insertAdjacentHTML("beforeend", 
-                `<div class="card">
-                    <time datetime="YYYY">${thisYear}<time>
-                    <time datetime="MM">${monthName}</time>
-                    <time datetime="DD">${i+1}<time>
-                </div>`)
+                    </div>`)
                 }
-            }
-            } else /*(months.days === 30);{
+            
+            /*} elseif (months.days = 28) {
 
-            for (let i = 0; i < 30; i++) {
-                section.insertAdjacentHTML("beforeend", 
-                `<div class="card">
-                    <time datetime="YYYY">${thisYear}</time>
-                    <time datetime="MM">${monthName}</time>
-                    <time datetime="DD">${i+1}</time>
-                </div>`) 
-                }
+            }*/
 
-        }*/
+
+
+
+            
+      
+                console.log(monthsThisYear) 
     }
-}       
+}
+window.addEventListener("load", loadEvent)
