@@ -51,30 +51,30 @@ function loadEvent() {
         }
     ];
 
-    for (const monthsThisYear of months) {
+    for (const month of months) {
 
         let rootElement = document.getElementById('root')
 
         let sect = document.createElement('section')
-        sect.setAttribute('id', monthsThisYear.name)
+        sect.setAttribute('id', month.name)
         document.getElementById('root').appendChild(sect)
         
-        /*let division = document.createElement('div')
+        let division = document.createElement('div')
         division.className = 'cards'
-        document.getElementById('root').appendChild(sect).appendChild(division)*/
+        document.getElementById('root').appendChild(sect).appendChild(division)
 
-        let card = document.createElement('card')
+        /*let card = document.createElement('card')
         card.className = 'card'
-        document.getElementById('root').appendChild(sect).appendChild(card)
+        document.getElementById('root').appendChild(sect).appendChild(card)*/
 
         
 
         
-        for (let i = 1; i <= 31; i++) {
+        for (let i = 1; i <= month.days; i++) {
             
-                card.insertAdjacentHTML("beforebegin", `<div class="card">
+                division.insertAdjacentHTML("beforebegin", `<div class="card">
                         <time datetime="YYYY">2022</time>
-                        <time datetime="MM">${monthsThisYear.name}</time>
+                        <time datetime="MM">${month.name}</time>
                         <time datetime="DD">${i}</time>
                         </div>`)
         }
@@ -109,7 +109,7 @@ function loadEvent() {
 
             
       
-                console.log(monthsThisYear) 
+                
     
 }
 window.addEventListener("load", loadEvent)

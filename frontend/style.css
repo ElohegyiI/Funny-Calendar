@@ -36,6 +36,16 @@ section {
   width: 100%;
 }
 
+.card {
+  cursor: pointer;
+  font-family: 'Fira Mono', monospace;
+}
+
+
+@media screen and (min-width: 800px) {
+
+
+
 #January {
   display: inline-flex;
   flex-wrap: wrap;
@@ -43,26 +53,33 @@ section {
   justify-content: flex-start;
   padding-left: 20px;
   gap: 10px 20px;
-  background-color: #A9B6AA;
+  background-color: #F3D307;
+}
 }
 
 #January .card {
   height: 100px;
   width: 150px;
-  border: 1px solid black;
   border-radius: 10px;
   text-align: center;
-  
+  background-color: #cab10f;
+  /*box-shadow: 0 px 16px 0 rgba(0,0,0,0.2);*/
+  transition: 0.3s;
 }
 
-#February {
+#January .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+  #February {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   padding-left: 20px;
   gap: 10px 20px;
-  background-color: #88B2C1;
+  background-color: #F3AB3E;
 }
 
 #February .card {
@@ -98,7 +115,7 @@ section {
   justify-content: flex-start;
   padding-left: 20px;
   gap: 10px 20px;
-  background-color: #E7E134;
+  background-color: #fcb603;
 }
 
 #April .card {
@@ -130,13 +147,130 @@ section {
 #June {
   display: grid;
   justify-self: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
-  gap: 10px 20px;
+  gap: 10px 5px;
   background-color: #E28787;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #June .card {
+  height: 100px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#July {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-left: 20px;
+  gap: 10px 20px;
+  background-color: #CE2735;
+}
+
+#July .card {
+  height: 100px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#August {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-left: 20px;
+  gap: 10px 20px;
+  background-color: #E24459;
+}
+
+#August .card {
+  height: 100px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#September {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-left: 20px;
+  gap: 10px 20px;
+  background-color: #8D8A38;
+}
+
+#September .card {
+  height: 100px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#October {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-left: 20px;
+  gap: 10px 20px;
+  background-color: #786A41;
+}
+
+#October .card {
+  height: 100px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#November {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-left: 20px;
+  gap: 10px 20px;
+  background-color: #894E47;
+}
+
+#November .card {
+  height: 100px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#December {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-left: 20px;
+  gap: 10px 20px;
+  background-color: #9E917D;
+}
+
+#December .card {
   height: 100px;
   width: 150px;
   border: 1px solid black;
