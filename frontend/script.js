@@ -58,37 +58,53 @@ function loadEvent() {
         let sect = document.createElement('section')
         sect.setAttribute('id', monthsThisYear.name)
         document.getElementById('root').appendChild(sect)
+        
+        /*let division = document.createElement('div')
+        division.className = 'cards'
+        document.getElementById('root').appendChild(sect).appendChild(division)*/
+
+        let card = document.createElement('card')
+        card.className = 'card'
+        document.getElementById('root').appendChild(sect).appendChild(card)
 
         
-        let division = document.createElement('div')
-        division.className = 'cards'
-        document.getElementById('root').appendChild(sect).appendChild(division)
+
         
         for (let i = 1; i <= 31; i++) {
             
-                let card = document.createElement('card')
-                card.className = 'card'
-                document.getElementById('root').appendChild(sect).appendChild(division).appendChild(card)
-                division.insertAdjacentHTML("beforebegin", `<div class="card">
+                card.insertAdjacentHTML("beforebegin", `<div class="card">
                         <time datetime="YYYY">2022</time>
                         <time datetime="MM">${monthsThisYear.name}</time>
                         <time datetime="DD">${i}</time>
                         </div>`)
-        
-            if (months.days <= 28) {
-                
-                for (let i = 1; i <= 28; i++) {
-                    
-                division.insertAdjacentHTML("beforebegin", `<div class="card">
-                        <time datetime="YYYY">2022</time>
-                        <time datetime="MM">${monthsThisYear.name}</time>
-                        <time datetime="DD">${i}</time>
-                        </div>`)
-                }
-                
-            }            
         }
-    }
+        /*if (months.days === 28) {
+                
+            for (let i = 1; i <= 28; i++) {
+                    
+            card.insertAdjacentHTML("beforebegin", `<div class="card">
+                        <time datetime="YYYY">2022</time>
+                        <time datetime="MM">${monthsThisYear.name}</time>
+                        <time datetime="DD">${i}</time>
+                        </div>`)
+            
+            } else { (months.days === 30) 
+            
+          
+                for (let i = 1; i <= 30; i++) {
+
+                    division.insertAdjacentHTML("beforebegin", `<div class="card">
+                    <time datetime="YYYY">2022</time>
+                    <time datetime="MM">${monthsThisYear.name}</time>
+                    <time datetime="DD">${i}</time>
+                    </div>`)  
+                    
+                }
+            }
+        }*/
+                        
+    }    
+    
 
 
             
