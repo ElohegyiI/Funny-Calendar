@@ -73,8 +73,8 @@ function loadEvent() {
         for (let i = 1; i <= month.days; i++) {
             
                 division.insertAdjacentHTML("beforebegin", `<div class="card">
-                        <time datetime="YYYY">2022</time>
-                        <time datetime="MM">${month.name}</time>
+                        <time datetime="YYYY">2022</time><br>
+                        <time datetime="MM">${month.name}</time><br>
                         <time datetime="DD">${i}</time>
                         </div>`)
         }
