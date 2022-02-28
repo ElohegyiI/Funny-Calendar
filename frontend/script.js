@@ -63,12 +63,7 @@ function loadEvent() {
         division.className = 'cards'
         document.getElementById('root').appendChild(sect).appendChild(division)
 
-        /*let card = document.createElement('card')
-        card.className = 'card'
-        document.getElementById('root').appendChild(sect).appendChild(card)*/
-
         
-
         
         for (let i = 1; i <= month.days; i++) {
             
@@ -103,13 +98,116 @@ function loadEvent() {
             }
         }*/
                         
-    }    
+    } 
     
+    
+        
+        let cardJan = document.querySelector('#January .card');
+        
+            cardJan.addEventListener('click', event => {
+                cardJan.style.background = "yellow"
+            });
+    
+        
+        let cardFeb = document.querySelector('#February .card');
 
+            cardFeb.addEventListener('click', event => {
+                cardFeb.style.background = "#3f2908"
+            });
 
+        let cardMar = document.querySelector('#March');
             
+            cardMar.addEventListener('click', event => {
+                cardMar.style.background = "#24C6E3"
+            });
+
+        let cardApr = document.querySelector('#April');
+
+            cardApr.addEventListener('click', event => {
+                cardApr.style.background = "cornsilk"
+            });
+   
+        let cardMay = document.querySelector('#May');
+
+            cardMay.addEventListener('click', event => {
+                cardMay.style.background = "#24C6E3"
+            });        
+
+        let cardJune = document.querySelector('#June .card');
+            
+            cardJune.addEventListener('click', event => {
+            cardJune.style.background = "#626DE3";
+             });
+
+    /*const cardJune = document.querySelector("#June")
+
+    function focusevent()
+	{
+	cardJune.document.getElementById("#June").style.background=" aqua";
+	}*/
+    
+    /*let cardJuly = document.getElementById('#July')
+
+    cardJuly.querySelector(".card").onmouseover = function() {mouseOver()};
+    cardJuly.querySelector(".card").onmouseout = function() {mouseOut()};
+
+    function mouseOver() {
+        cardJuly.querySelector(".card").style.color = "yellow";
+      }
       
-                
+      function mouseOut() {
+        cardJuly.querySelector(".card").style.color = "black";
+      }*/
+     
+      /*document.getElementById("demo").addEventListener("mouseover", mouseOver);
+      document.getElementById("demo").addEventListener("mouseout", mouseOut);
+      
+      function mouseOver() {
+        document.getElementById("demo").style.color = "red";
+      }
+      
+      function mouseOut() {
+        document.getElementById("demo").style.color = "black";
+      }*/
+
+    let monthJuly = document.querySelector('#July');
+        monthJuly.addEventListener('click', event => {
+        monthJuly.style.background = "pink";}
+
+        );
+
+    let cardJuly = document.querySelector('#July .card');
+        cardJuly.addEventListener('click', event => {
+        cardJuly.style.border = "2px solid #dd7280"}
+        
+        );
+
+
+    let monthSept = document.querySelector('#September');
+        monthSept.addEventListener('click', event => {
+        monthSept.style.background = "pink"}
+        
+        );
+
+    let monthNov = document.querySelector('#November .card');
+        monthNov.addEventListener('click', event => {
+        monthNov.style.color = "red"
+        
+        });
+
+
+    let cardDec = document.querySelector('#December .card')    
+        cardDec.addEventListener('click', event => {
+        cardDec.style.border = "4px dotted #f081b5"
+        });
+    
+      
+
+
+        
+        
+        
+         
     
 }
 window.addEventListener("load", loadEvent)
