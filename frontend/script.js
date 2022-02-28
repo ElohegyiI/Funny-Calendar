@@ -73,30 +73,7 @@ function loadEvent() {
                         <time datetime="DD">${i}</time>
                         </div>`)
         }
-        /*if (months.days === 28) {
-                
-            for (let i = 1; i <= 28; i++) {
-                    
-            card.insertAdjacentHTML("beforebegin", `<div class="card">
-                        <time datetime="YYYY">2022</time>
-                        <time datetime="MM">${monthsThisYear.name}</time>
-                        <time datetime="DD">${i}</time>
-                        </div>`)
-            
-            } else { (months.days === 30) 
-            
-          
-                for (let i = 1; i <= 30; i++) {
-
-                    division.insertAdjacentHTML("beforebegin", `<div class="card">
-                    <time datetime="YYYY">2022</time>
-                    <time datetime="MM">${monthsThisYear.name}</time>
-                    <time datetime="DD">${i}</time>
-                    </div>`)  
-                    
-                }
-            }
-        }*/
+        
                         
     } 
     

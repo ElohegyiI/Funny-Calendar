@@ -339,8 +339,8 @@ section {
 }
 
 #August .card:active {
-  background-color: #dd7280;
-  box-shadow: 0 5px #666;
+  background-color: #db959e;
+  color: #666;
   transform: translateY(4px);
 }
 
