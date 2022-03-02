@@ -49,7 +49,7 @@ const dayCard = (year, month, day) => {
         <time datetime="YYYY">${year}</time>
         <time datetime="MM">${month}</time>
         <time datetime="DD">${day}</time>
-        <button>Get day name</button>
+        <button class="card-Btn">Get day name</button>
         </div>
        
     `;
@@ -86,20 +86,38 @@ const loadEvent = _ => {
 
     document.getElementById('root').insertAdjacentHTML('beforeend', content)
    
-    const cardList = document.querySelectorAll('.card')
     /*click event*/
-
-    function cardButtonClickEvent(event) {
-        console.log(event.target)
-
+    
+    /*function cardButtonClickEvent(event) {
+        console.log(event.target.parentElement)
+        
+        event.target.parentElement.classList.toggle('clicked')
+        
     }
+    const cardList = document.querySelectorAll('.card')
 
     for (const card of cardList) {
         
         card.querySelector('button').addEventListener('click', cardButtonClickEvent)
         
 
+    }*/
+
+    function clickEvent(event) {
+
+        //console.log(event.target)
+
+        if (event.target.classList.contains('card-Btn')) {
+
+            console.log('hello click')
+
+            event.target.innerHTML = "This button was clicked"
+
+        }
+
     }
+
+    document.addEventListener('click', clickEvent)
 
 }
 window.addEventListener('load', loadEvent) 
