@@ -1,7 +1,7 @@
 
 
 
-function loadEvent() {
+const loadEvent = () => {
 
     const rootElement = document.getElementById('root')
 
@@ -70,6 +70,27 @@ function loadEvent() {
              console.log(event.target)
         })    
 
+/*Fetch dátumokra, több képre*/
+
+    const nasaApiKey = 'd8rG7d4dYIisXPSU8KBH17ipMYR7pPGj1tjRgNqD'
+    const requestedDate = "2022.02.22"
+    const apod = await fetch(".....${apiKey}....${requestedDate")
+
+    const apodJson = await.apod.json() 
+    console.log(apodJson.explanation)
+
+    fetch(`
+    https.....${apiKey}....${requestedDate}.then(
+        function(apodResponse) {
+            console.log(apodResponse)
+            apodResponse.json(.then(
+                function(apodResponseJson) {
+                    console.log(apodResponseJson.explanation)
+                }
+            ))
+        }
+    )
+    `)
 
 
 }
