@@ -1,4 +1,130 @@
-function loadEvent() {
+
+/* Get data */
+
+function Month(name, id, nth, days) {
+
+    this.name = name,
+    this.id = id,
+    this.nth = nth,
+    this.days = days
+
+}
+
+    const months = [
+        new Month('January', 'jan', 1, 31),
+        new Month('February', 'feb', 2, 28),
+        new Month('March', 'mar', 3, 31),
+        new Month('April', 'apr', 4, 30),
+        new Month('May', 'may', 5, 31),
+        new Month('June', 'june', 6, 30),
+        new Month('July', 'july', 7, 31),
+        new Month('August', 'aug', 8, 31),
+        new Month('September', 'sept', 9, 31),
+        new Month('October', 'oct', 10, 31),
+        new Month('November', 'nov', 11, 30),
+        new Month('December', 'dec', 12, 31)
+
+    ]
+
+    //console.log(months)
+
+/* Prepare data */
+
+
+
+/* Components - HTML elements we would like to add to the page, section, content */
+
+    const monthSection = (id, h1, days) => {
+
+        return `
+        <section id='${id}'>
+            <h1>${h1}</h1>
+            <div class='days'>${days}</div>
+        </section>
+        `;
+    }
+
+    const dayCard = (year, month, day) => {
+
+        return `
+        <div class='card'>
+            <time>${year}</time><br>
+            <time>${month}</time><br>
+            <time>${day}</time><br>
+        </div>         
+        `;
+
+    }
+
+    const dayCards = (month, callDayCard) => {
+
+        let toReturn = '';
+
+        
+        for (let i = 1; i <= month.days; i++) {
+            
+            toReturn += callDayCard(2022, month.nth, i)
+            
+        }
+        return toReturn;
+
+    }
+    //console.log(dayCards(months[6], dayCard))
+
+
+
+/* render */
+
+const loadEvent = _ => {
+
+    for (const month of months) {
+        
+        content += monthSection(month.id, month.name, dayCards(month, dayCard))
+
+    }  
+    document.getElementById('root').insertAdjacentHTML('beforeend', content)
+
+    //eventhandling, clickevent
+
+    /*function cardClickEvent(event) {
+        
+        console.log(event.target.parentElement)
+        event.target.parentElement.classList.toggle('clicked')
+
+    }
+
+    const cardList = document.querySelectorAll('.card')
+
+        for (const card of cardList) {
+
+            //console.log(card)
+
+            card.querySelector('Card').addEventListener('click', cardClickEvent)
+
+        }*/
+
+        function clickEvent(event) {
+
+            //console.log(event.target)
+            //if (event.target.classList.contains('card'))
+            
+            const backgroundColor = event.target.style.backgroundColor;
+
+                if (backgroundColor === 'salmon') {
+                  event.target.style.backgroundColor = 'green';
+                } else {
+                  event.target.style.backgroundColor = 'salmon';
+                }
+            //event.target.getAttribute('style')
+
+        }
+
+        document.addEventListener('click', clickEvent)
+
+}
+window.addEventListener('load', loadEvent)
+
+/*function loadEvent() {
 
     let months = [
         {
@@ -147,7 +273,7 @@ function loadEvent() {
         document.getElementById("demo").style.color = "black";
       }*/
 
-    let monthJuly = document.querySelector('#July');
+    /*let monthJuly = document.querySelector('#July');
         monthJuly.addEventListener('click', event => {
         monthJuly.style.background = "pink";}
 
@@ -187,4 +313,4 @@ function loadEvent() {
          
     
 }
-window.addEventListener("load", loadEvent)
+window.addEventListener("load", loadEvent)*/
