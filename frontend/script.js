@@ -45,7 +45,7 @@ const loadEvent = () => {
         Array.from(inputList).map(function(input) {
             input.addEventListener('input', function(event) {
                 
-                console.log(event.target.value);
+                //console.log(event.target.value);
                 
             })
             
@@ -59,13 +59,13 @@ const loadEvent = () => {
             
         })*/
 
-        form.querySelector('select').addEventListener('input', function(event) {
+        form.querySelector('select').addEventListener('input'), function(event) {
         
         form.addEventListener('submit', function(event) {
-            event.preventDefault()
-            console.log(event.target)
+            event.preventDefault();
+            console.log(event.target);
         })  
-        }
+    }
         /*for (const input of inputList ) {
 
             input.addEventListener('input', function(event) {
@@ -95,8 +95,7 @@ const loadEvent = () => {
         }
     )
     `)*/
+
 }
-
-
 
 window.addEventListener('load', loadEvent)
