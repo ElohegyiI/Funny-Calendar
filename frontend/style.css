@@ -41,7 +41,7 @@ section {
   cursor: pointer;
   font-family: 'Fira Mono', monospace;
   padding-top: 15px;
-  /*box-shadow: 4px 8px 16px 4px;*/
+  background-color: #ffe86b;
 
 }
 
@@ -60,7 +60,7 @@ h1 {
   
 }
 
-@media screen and (min-width: 450px) { 
+@media screen and (min-width: 900px) { 
   
 #jan {
   background-color: #f9f9f9;
@@ -73,7 +73,7 @@ h1 {
   width: 150px;
   border-radius: 10px;
   text-align: center; 
-  background-color: #c5c5c6;
+  
   /*box-shadow: 0 px 16px 0 rgba(0,0,0,0.2);*/
   transition: 0.5s;
   color: #3c3c49;
@@ -95,7 +95,7 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 899px) {
 
 #feb {
   background-color: burlywood;
@@ -103,7 +103,7 @@ h1 {
 
 }
 
-#feb .card {
+#feb .days .card {
   height: 100px;
   width: 150px;
   background-color: rgb(223, 175, 113);
@@ -112,7 +112,7 @@ h1 {
   transition-duration: 0.5s;
 }
 
-#feb .card:hover {
+#feb .days .card:hover {
   background-color: #af6c09; 
   color: #FFFF;
 }
@@ -130,7 +130,7 @@ h1 {
   
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 898px) {
 
 #mar {
   background-color: #f9f9f9;
@@ -146,7 +146,7 @@ h1 {
   background-color: #fdf450;
 }
 
-#mar .card:hover {
+#mar .days .card:hover {
   opacity: 0.6;
   cursor: not-allowed;
   box-shadow: none;
@@ -162,7 +162,7 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 897px) {
 
 #apr {
   background-color: rgb(251, 251, 40);
@@ -177,7 +177,7 @@ h1 {
   text-align: center;
 }
 
-#apr .card:link, #apr .card:visited {
+#apr .days .card:link, #apr .card:visited {
   background-color: lightcoral; 
   color: black; 
   text-align: center; 
@@ -185,7 +185,7 @@ h1 {
   box-shadow: 5px 5px 5px 5px; 
   transition-duration: 2s;
 }
-	#apr .card:hover, #apr .card:active {
+	#apr .days .card:hover, #apr .days .card:active {
     background-color: red;
     color:cornsilk;
   }
@@ -203,7 +203,7 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 896px) {
 
 #may {
   background-color: #f9f9f9;
@@ -211,14 +211,14 @@ h1 {
 
 }
 
-#may .card {
+#may .days .card {
   height: 100px;
   width: 150px;
   border-radius: 10px;
   text-align: center;
 }
 
-#may .card:hover {
+#may .days .card:hover {
   opacity: 0.8;   
   transform: scale(1.5);
   color:red;
@@ -239,27 +239,25 @@ h1 {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 895px) {
 
 #jun {
   display: block;
-  background-color: #f9f9f9;
-  grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 }
 
 
-#jun .card {
+#jun .days .card {
   height: 100px;
   width: 150px;
-  
+  background-color: thistle;
   border-radius: 10px;
   text-align: center;
 }
 
-#jun .card:hover {
+#jun .days card:hover {
   opacity: 0.8; 
   transition: 1.5s;  
   transform: scale(1.2);
@@ -270,7 +268,7 @@ h1 {
   display: grid;
   justify-self: center;
   align-items: center;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, auto);
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
@@ -278,13 +276,12 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (min-width: 894px) {
 
 #july {
   display: block;
   background-color: #f9f9f9;
-  grid-template-areas: 
-    'card'
+  width: 100%;
 }
 }
 
@@ -316,7 +313,7 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 893px) {
 
 #aug {
   display: block;
@@ -356,7 +353,7 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 892px) {
 
 #sept {
   display: block;
@@ -388,13 +385,13 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (min-width: 891px) {
 
 #oct {
   display: block;
   background-color: #f9f9f9;
   grid-template-areas: 
-    'card'
+    'days'
 }
 
 }
@@ -438,13 +435,13 @@ h1 {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 890px) {
 
 #nov {
   display: block;
   background-color: cornsilk;
   grid-template-areas: 
-    'card'
+    'days'
 }
 }
 
@@ -467,7 +464,7 @@ h1 {
   
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 889px) {
 
 #dec {
   background-color: #f081b5;

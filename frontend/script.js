@@ -110,10 +110,10 @@ const loadEvent = _ => {
             
             const backgroundColor = event.target.style.backgroundColor;
 
-                if (backgroundColor === 'salmon') {
-                  event.target.style.backgroundColor = 'green';
+                if (backgroundColor === 'yellow') {
+                  event.target.style.backgroundColor = 'red';
                 } else {
-                  event.target.style.backgroundColor = 'salmon';
+                  event.target.style.backgroundColor = 'yellow';
                 }
             //event.target.getAttribute('style')
 
