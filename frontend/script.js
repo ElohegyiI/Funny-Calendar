@@ -7,7 +7,7 @@
 
 - rendered = add the components to the document */
 
-function Month(name, id, nth, days) {
+/*function Month(name, id, nth, days) {
 
     this.name = name;
     this.id = id;
@@ -33,7 +33,7 @@ const months = [
     new Month('November', 'nov', 11, 30),
     new Month('December', 'dec', 12, 31)
 ]
-/*console.log(months)*/
+/*console.log(months)
 
 const monthSection = (id, h1, days) => {
     return `
@@ -68,7 +68,7 @@ const dayCards = (month, callDayCard) => {
     return toReturn;
 
 }
-/*console.log(dayCards(months[0], dayCard))*/
+/*console.log(dayCards(months[0], dayCard))
 
 
 
@@ -86,7 +86,7 @@ const loadEvent = _ => {
 
     document.getElementById('root').insertAdjacentHTML('beforeend', content)
    
-    /*click event*/
+    click event*/
     
     /*function cardButtonClickEvent(event) {
         console.log(event.target.parentElement)
@@ -101,7 +101,7 @@ const loadEvent = _ => {
         card.querySelector('button').addEventListener('click', cardButtonClickEvent)
         
 
-    }*/
+    }
 
     function clickEvent(event) {
 
@@ -120,5 +120,91 @@ const loadEvent = _ => {
     document.addEventListener('click', clickEvent)
 
 }
-window.addEventListener('load', loadEvent) 
+window.addEventListener('load', loadEvent)
 /*callback függvény, nincs zárójel, nem fut le */
+
+
+/*function getSiteName(url) {
+
+let newUrl = new URL(url)
+
+let x = newUrl.hostname.split('.')
+
+let result = x[0].charAt(0).toUpperCase() + x[0].substring(1)
+
+
+
+console.log(result)
+
+}
+getSiteName('https://vice.com/')
+
+const users = {
+    "id": 123,
+    "username": "belakovacs12",
+    "email": "bela@gmail.com",
+    "phone": "701231231",
+    "isConfirmed": true
+  }
+
+
+
+function getUserIdentifiers(users) {
+  
+    let x = [];
+
+    for (const user of Array.from(users)) {
+        
+        x.push(`${user.username}@${user.id}`)
+    }
+
+
+    return x
+  
+    
+    
+    console.log(x)
+}
+getUserIdentifiers(users)*/
+
+/*const user = [
+    {
+        id: 4733631,
+        username: "akarkine99",
+        email: "kazmerne@gmail.com",
+        phone: "206546547",
+        gender: "female",
+        age: 20,
+        isConfirmed: false
+      },
+      {
+        id: 4733632,
+        username: "akarkine99",
+        email: "ifjkazmerne@gmail.com",
+        phone: "206546547",
+        gender: "female",
+        age: 17,
+        isConfirmed: false
+      }
+  ]
+
+
+function getFemaleAdults(user) {
+  
+    let x = [];
+
+    for (const names of user) {
+        
+        if( user.gender === 'female' && user.age >= 18 ) {
+
+            x.push(user)
+            console.log(user)
+        }
+
+        
+        //return x
+    } 
+  
+  
+}
+getFemaleAdults(user)*/
