@@ -108,12 +108,12 @@ const loadEvent = _ => {
             //console.log(event.target)
             //if (event.target.classList.contains('card'))
             
-            const backgroundColor = event.target.style.backgroundColor;
+            const color = event.target.style.color;
 
-                if (backgroundColor === 'salmon') {
-                  event.target.style.backgroundColor = 'green';
+                if (color === 'salmon') {
+                  event.target.style.color = 'green';
                 } else {
-                  event.target.style.backgroundColor = 'salmon';
+                  event.target.style.color = 'salmon';
                 }
             //event.target.getAttribute('style')
 
