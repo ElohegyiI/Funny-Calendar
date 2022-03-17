@@ -309,7 +309,7 @@ for ( i = 5; i >= 1; i-- ) {
 
 
 
-const companies = [
+/*const companies = [
     { name: 'Company One', category: 'finance', start: 1978, end: 2000 },
     { name: 'Company Two', category: 'retail', start: 1980, end: 2010 },
     { name: 'Company Three', category: 'auto', start: 1979, end: 2002 },
@@ -320,7 +320,7 @@ const companies = [
     { name: 'Company Eight', category: 'technology', start: 1945, end: 2022 }
 ]
 
-const ages = [ 12, 34, 43, 67, 89, 51, 29, 79, 65, 23, 10 ]
+const ages = [ 12, 34, 43, 67, 89, 51, 29, 79, 65, 23, 10 ]*/
 
 /*for (let i = 0; i < companies.length; i++) {
     console.log(companies[i])
@@ -470,18 +470,164 @@ const lastedTenYears = companies.filter((company)  => {
 });
 console.log(lastedTenYears)*/
 
-function myFilter(company) {
+function filter_list(l) {
+    return l.filter( item => typeof item === 'number' );
+  }
 
-    for (let i = 0; i < companies.length; i++) {
 
-        if (company.start < 2010) {
-            
-            return true
-            
-        }
+
+/*function extensionFileName(filename) {
+
+    let result = [];
+
+    let file = filename.slice(1, 5)
+    
+    //let result = file[0].charAt(0).toUpperCase() + file[0].substring(1)
+    result.push(file)
+
+    console.log(result)
+
+}
+extensionFileName('Annamária')*/
+
+/*const users = {
+    "id": 123,
+    "username": "belakovacs12",
+    "email": "bela@gmail.com",
+    "phone": "701231231",
+    "isConfirmed": true
+  }
+
+function getUserIdentifiers(users) {
+  
+    let x = [];
+
+    for (const user of Array.from(users)) {
+        
+        x.push(`${user.username}@${user.id}`)
     }
-    console.log(company.start)
-
+    console.log(x)
+    
+    return x
+    
+  
+    
     
 }
-myFilter()
+getUserIdentifiers(users)*/
+
+/*function myReverse(word) {
+
+    let result = [];
+
+    let wordReversed = word.split('').reverse().join('')
+
+    if( wordReversed === word ) {
+
+        result.push(wordReversed)
+
+    } else {
+
+        return 'This is not a palindrome'
+    }
+    //console.log(result)
+
+    
+
+}
+myReverse('ikied')*/
+
+/*function mySort(str) {
+
+    let result = [];
+
+    let arr = str.split('')
+
+    let arrSorted = arr.sort()
+    
+    result.push(arrSorted)
+
+    console.log(result)
+}
+mySort('hullahoopa')*/
+
+/*function mySentence(sentence) {
+
+    let result = [];
+
+    let arr = sentence.split(' ')
+
+    for (let i = 0; i < arr.length; i++) {
+
+    let y = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+    //result.push(y)
+    console.log(y)
+    } 
+}
+mySentence('tele a faszom az egész kurva anyjával')*/
+
+/*function shortcut(s1, s2) {
+
+    let result = [];
+
+    let x = s1.charAt(0) + s2.charAt(0);
+
+    result.push(x)
+
+    console.log(result)
+
+  }
+  shortcut('Annamária', 'Benő')*/
+
+  const companies = [
+    { name: 'Company One', category: 'finance', start: 1978, end: 2000 },
+    { name: 'Company Two', category: 'retail', start: 1980, end: 2010 },
+    { name: 'Company Three', category: 'auto', start: 1979, end: 2002 },
+    { name: 'Company Four', category: 'technology', start: 1988, end: 2020},
+    { name: 'Company Five', category: 'auto', start: 1998, end: 2001 },
+    { name: 'Company Six', category: 'technology', start: 1999, end: 2015 },
+    { name: 'Company Seven', category: 'finance', start: 1923, end: 2001 },
+    { name: 'Company Eight', category: 'technology', start: 1945, end: 2022 }
+]
+
+const ages = [ 12, 34, 43, 67, 89, 51, 29, 79, 65, 23, 10 ]
+
+
+
+/*function myAges(age) {
+
+    let result = [];
+
+    for(let i = 1; i < ages.length; i++) {
+        
+        if(ages[i] >= 51) {
+
+            result.push(ages[i])
+        }
+
+        console.log(result)
+    }
+
+
+}
+myAges()*/
+
+/*companies.forEach(function(company) {
+    console.log(company.name)
+})*/
+
+function myName(company) {
+
+const retailCompanies = company.filter() 
+
+    if (company.category === 'retail') {
+        
+        console.log(retailCompanies)
+
+        return true
+
+    }
+    
+}
+myName(companies)
