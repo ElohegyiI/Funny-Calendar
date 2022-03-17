@@ -442,8 +442,12 @@ section {
 
 #November {
   display: block;
+  gap: 10px 20px;
   background-color: cornsilk;
   grid-template-areas: 
+    'card'
+    'card'
+    'card'
     'card'
 }
 }
@@ -467,7 +471,7 @@ section {
   
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (max-width: 850px) {
 
 #December {
   background-color: #f081b5;

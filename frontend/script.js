@@ -79,7 +79,7 @@ function loadEvent() {
     
     
         
-        let cardJan = document.querySelector('#January .card');
+        /*let cardJan = document.querySelector('#January .card');
         
             cardJan.addEventListener('click', event => {
                 cardJan.style.background = "yellow"
@@ -145,7 +145,7 @@ function loadEvent() {
       
       function mouseOut() {
         document.getElementById("demo").style.color = "black";
-      }*/
+      }
 
     let monthJuly = document.querySelector('#July');
         monthJuly.addEventListener('click', event => {
@@ -176,9 +176,25 @@ function loadEvent() {
     let cardDec = document.querySelector('#December .card')    
         cardDec.addEventListener('click', event => {
         cardDec.style.border = "4px dotted #f081b5"
-        });
+        });*/
     
-      
+        function clickEvent(event) {
+
+            //console.log(event.target)
+            //if (event.target.classList.contains('card'))
+            
+            const backgroundColor = event.target.style.backgroundColor;
+
+                if (backgroundColor === 'yellow') {
+                  event.target.style.backgroundColor = 'red';
+                } else {
+                  event.target.style.backgroundColor = 'yellow';
+                }
+            event.target.getAttribute('style')
+
+        }
+
+        document.addEventListener('click', clickEvent)
 
 
         
