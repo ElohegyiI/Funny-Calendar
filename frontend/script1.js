@@ -1,214 +1,361 @@
 
-const companies = [
-
-    { name: 'Company One', category: 'finance', start: 1978, end: 2000 },
-    { name: 'Company Two', category: 'retail', start: 1980, end: 2010 },
-    { name: 'Company Three', category: 'auto', start: 1979, end: 2002 },
-    { name: 'Company Four', category: 'technology', start: 1988, end: 2020},
-    { name: 'Company Five', category: 'auto', start: 1998, end: 2001 },
-    { name: 'Company Six', category: 'technology', start: 1999, end: 2015 },
-    { name: 'Company Seven', category: 'finance', start: 1923, end: 2001 },
-    { name: 'Company Eight', category: 'technology', start: 1945, end: 2022 }
-];
-
-const ages = [ 12, 34, 43, 67, 89, 51, 29, 79, 65, 23, 10 ]
-
-/*for (let i = 0; i < companies.length; i++) {
-
-        console.log(companies[i])
-}*/
 
 
-/*function canDrink(ages) {
+/*const clon = 
 
-    let result = [];
-    
-    let str = result.toString()
+  { name: "Jango Fett", age: 35, gender: "male" }
 
-    for (let i = 0; i < ages.length; i++) {
-        
-        if(ages[i] >= 51 ) {
+function createCloneArmy(person, number) {
 
-            result.push(ages[i])
-            
-        }
-        
-        
+  let result = [];
+
+  if (number <= 100) {
+
+    for (let i = 1; i <= number; i++) {
+
+      result.push(clon)
+
     }
-    console.log(str)
-    return str
-}
-canDrink(ages)*/
-
-/*const testMap = companies.map(function(company) {
-
-    return `${company.name} [${company.start} - ${company.end}]`
-
-})*/
-
-
-
-/*companies.forEach(function(company) {
-    
-    console.log(company.end)
-
-});
-
-ages.forEach(function(ages) {
-
-    console.log(ages)
-});*/
-
-
-
-/*const eigthiesCompanies = companies.filter(company => (company.start >= 1980 && company.end < 2010))*/
-
-/*function eigthiesCompanies(company) {
-
-    let result = [];
-
-    for (const comp of companies) {
-
-        if(companies.start === 1988 && companies.end === 2020 ){
-
-            result.push(comp)
-            console.log(comp)
-            
-        }
-        console.log(comp)
-    }
-    
-
-}
-eigthiesCompanies(companies)*/
-
-
-/*function greet(word) {
-
-    console.log(word)
-    return 'Hello ' + word
-}
-greet('Ada')
-
-function myLength(sentence) {
-
-    let result = [];
-
-    let sentenceLength = sentence.length
-
-    result.push(sentenceLength)
-
-    console.log(result)
-}
-myLength('A kurva anyját a Javascriptnek!22')
-
-function myCase(words) {
-
-    let x = [];
-
-    let caseWords = words.toUpperCase()
-
-    let result = words + '-' + caseWords
-
-    x.push(result)
-
-    console.log(x)
-}
-myCase('annamária')
-
-function myTrim(words) {
-
-    let result = [];
-
-    let trimWords = words.trim()
-
-    
-    result.push(trimWords)
-    console.log(result)
-    
-}
-myTrim(' A kurva anyját neki! ')
-
-function myReplace(words) {
-
-    let replaceDate = words.replace(/-/g, '/')
-
-    console.log(replaceDate)
-
-}
-myReplace('2020-03-16')
-
-function onesDigit(n) {
-
-    let x = n % 10
-    
-    console.log(x)
-
-    return x
-  }
-  onesDigit(2674)*/
-
-  /*function mySum() {
-
-    let sum = 0;
-
-    let numbersSum = 0;
-
-    let result = [];
-
-    for(let i = 0; i <= 10; i++) {
-        
-        sum = sum + i;
-        
-        result.push(sum)
-    }
-    console.log(result)
-    
-    
-    /*for(let i = 0; i < result.length; i++) {
-        
-        let x = numbersSum += result[i]
-        
-        
-        
-        console.log(x)
-        return x
-    }*/
-
-  
-
-
-  /*function simplifyNumber(number) {
-
-    
-
-    if (number < 0) {
-
-        return 'nulla'
-
-    } else if (number > 10) {
-
-        return 'sok'
 
     } else {
 
-        return 'nem'
+      for (let i = 1; i <= 100; i++) {
+
+        result.push(clon)
+
+      }
+
     }
-    
+        console.log(result)
+  
+}createCloneArmy(clon, 8)*/
+
+
+/*function mean(data) {
+
+  let sum = 0;
+
+  for (let i = 0; i < data.length; i ++) {
+    sum = sum + data[i];
+  }
+  console.log(sum)
+  return sum / data.length;
+}mean([1,2,3,4,5])*/ 
+
+/*let words = 'blu white red';
+
+let indexFirstSpace = -1;
+
+function myTest() {
+
+for (let i = 0; i < words.length; i++) {
+
+  if (words.charAt(i) === ' ') {
+
+    indexFirstSpace = i;
+
+    break;
+  }
+}
+console.log(indexFirstSpace)
+
+return indexFirstSpace
+
+}myTest()
+
+
+
+
+function isPrimeNumber(n) {
+
+  for (let i = 2; i < n; i++) { // i will always be less than the parameter so the condition below will never allow parameter to be divisible by itself ex. (7 % 7 = 0) which would return true
+    if(n % i === 0) return false; // when parameter is divisible by i, it's not a prime number so return false
+  }
+  
+  return n > 1; // otherwise it's a prime number so return true (it also must be greater than 1, reason for the n > 1 instead of true)
+}
+console.log(isPrimeNumber(23856))*/
+
+
+/*function filterLongWords(sentence, n) {
+  
+  let result = [];
+
+  let x = sentence.split(' ').length
+
+  //let y = x.length
+
+  
+
+  console.log(x)
+
+  
+
+}filterLongWords('Ha egyszer belejönnék, milyen fasza lenne')*/
+
+/*function myLoop() {
+
+  let text = "";
+
+  for (let i = 0; i < 5; i++) {
 
     
+    console.log(text)
     
+    return text += "The number is " + i 
+    
+  }
+
+}myLoop()*/
+
+
+/*function myArray() {
+
+  let result = [];
+
+  let others = [];
+
+  const numbers = [13, 45, 54, 134, 739, 234, 150, 1230]
+
+  for (const number of numbers) {
+
+    if (number <= 739 && number >= 45) {
+
+      result.push(number)
+
+    } else {
+
+      others.push(number)
+      others[0].toString()
+
+    }
+  }
+  console.log(others, result)
+  return result + others
+
+}myArray()*/
+
+/*function fakeNumber(number) {
+  
+  //console.log(typeof number)
+
+  return number.toString()
+  .replace('0', 'X')
+  .split('')
+  .reverse()
+  .join('')
+  
+}console.log(fakeNumber(3440))*/
+
+/*const cars =
+{
+  "brand": "Renault",
+  "doors": 5,
+  "distance": 35000
+}
+
+function sumOfKmsBySmallBMWs(cars) {
+  
+  let km = 0;
+
+  for (car of cars ) {}
+
+  if ( cars.brand === 'BMW' && cars.doors === 2){
+  
+    console.log(cars)
+    return cars.distance
 
   }
-  simplifyNumber(11)*/
+}
+}sumOfKmsBySmallBMWs(cars.distance)*/
 
-  function amplifyBs(sentence) {
 
-      let result = sentence+'!'+sentence+'!!'+sentence+'!!!'+sentence+'!!!!'+sentence+'!!!!!'
-      
 
-      console.log(result)
 
-        return result
+
+/*const getLongestEnglishComedy = (movies) => {
+  
+  let result = null;
+
+  for (let movie of movies) {
+
+    if ( )
+
   }
-  amplifyBs('Éld át az élményt')
+  
+  return Math.max(movies.length)
+}*/
+
+/*function myTest(x, y) {
+
+  if ( x > y ) {
+
+    return x
+
+  } else if ( y > x ) {
+
+    return y
+
+  } else {
+
+    return null
+
+  }
+
+}console.log(myTest(33,33))
+
+function mySign(x, y, z) {
+
+let isString = x.toString() + y.toString().replace(y, 'WR') + z.toString()
+
+let m = isString.split('')
+
+let n = m.reverse()
+
+console.log(n)
+
+return n
+  
+}console.log(mySign(2,3,4))*/
+
+
+/*const companies = [
+
+  { name: 'Company One', category: 'finance', start: 1978, end: 2000 },
+  { name: 'Company Two', category: 'retail', start: 1980, end: 2010 },
+  { name: 'Company Three', category: 'auto', start: 1979, end: 2002 },
+  { name: 'Company Four', category: 'technology', start: 1988, end: 2020},
+  { name: 'Company Five', category: 'auto', start: 1998, end: 2001 },
+  { name: 'Company Six', category: 'technology', start: 1999, end: 2015 },
+  { name: 'Company Seven', category: 'finance', start: 1923, end: 2001 },
+  { name: 'Company Eight', category: 'technology', start: 1945, end: 2022 }
+
+]
+
+const ages = [ 12, 34, 43, 67, 89, 51, 29, 79, 65, 23, 10 ]*/
+
+
+/*const filteredAges = ages.filter((ages) => { 
+  
+  return ages > 12 && ages < 89
+  
+})
+console.log(filteredAges)*/
+
+/*const filteredCompanies = companies.filter((companies) => {
+
+  
+  
+  
+  if ( companies.start >= 1979 ) {
+    
+    console.log(companies.start)
+    return companies.start
+    
+  }
+
+  
+})*/
+
+/*const filteredCompanies = companies.filter((companies) => {
+
+  
+  if ( companies.end < 2015 ) {
+    
+    
+    console.log(companies.name, companies.start, companies.category)
+    
+    //return companies.name
+
+  }
+
+  //return companies.end
+
+})*/
+
+/*function myTest(str) {
+
+  let result = [];
+
+  let x = str.replace(/3/g, 'E').replace(/0/g, 'O').replace(/4/, 'A').replace(/L/g, 'l').split('').join(' ')
+  
+  result.push(x)
+
+  
+  
+  console.log(x)
+
+  return x
+
+
+}myTest('304L')
+
+
+function firstWord(x) {
+
+let y = x.indexOf(' ')
+
+let z = x.substring(0, y)
+
+console.log(z)
+
+return z
+
+
+}firstWord('see and stop')
+
+
+const cars = ['Volvo', 'Fiat', 'Skoda']
+
+function myCars() {
+
+  let result = "";
+
+for (let i = 0; i < cars.length; i++) {
+
+console.log(cars[i])
+
+result += cars[i] 
+
+
+}
+return result
+
+}myCars()*/
+
+/*let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i;
+
+}
+console.log(text)
+return text*/
+
+/*function likes(names) {
+
+  
+  console.log(names)
+  return 
+    
+  
+
+}likes()*/
+  
+let grades = [10, 5, 15, 20]
+
+// calculate the sum of these grades
+/*let sum = grades.reduce((total, current) => {
+  return total + current
+  
+}, 0);
+console.log(sum)*/
+
+let sum = 0;
+
+grades.forEach(grade => {
+ 
+  sum = sum + grade
+
+});
+console.log(sum)
