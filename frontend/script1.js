@@ -273,25 +273,25 @@ console.log(filteredAges)*/
 
 })*/
 
-/*function myTest(str) {
+function myTest(str) {
 
   let result = [];
 
-  let x = str.replace(/3/g, 'E').replace(/0/g, 'O').replace(/4/, 'A').replace(/L/g, 'l').split('').join(' ')
+  let x = str.replaceAll(/3/g, 'E').replaceAll(/0/g, 'O').replaceAll(/4/g, 'A').replaceAll(/1/g, 'l').split('').join(' ')
   
-  result.push(x)
+  //result.push(x)
 
   
   
   console.log(x)
 
-  return x
+  //return x
 
 
-}myTest('304L')
+}myTest('34451201239')
 
 
-function firstWord(x) {
+/*function firstWord(x) {
 
 let y = x.indexOf(' ')
 
@@ -342,14 +342,14 @@ return text*/
 
 }likes()*/
   
-let grades = [10, 5, 15, 20]
+//let grades = [10, 5, 15, 20]
 
 // calculate the sum of these grades
 /*let sum = grades.reduce((total, current) => {
   return total + current
   
 }, 0);
-console.log(sum)*/
+console.log(sum)
 
 let sum = 0;
 
@@ -358,4 +358,73 @@ grades.forEach(grade => {
   sum = sum + grade
 
 });
-console.log(sum)
+console.log(sum)*/
+
+/*function myEmail(str) {
+
+let result = [];
+
+let x = str.split('.')
+
+let y = x[0].charAt(0).toUpperCase() + x[0].substring(1)
+
+let z = x[1].charAt(0).toUpperCase() + x[1].substring(1)
+
+let s = y + ' ' + z
+
+result.push(s)
+
+//result.push(str)
+console.log(result)
+return result
+
+}myEmail('peter.deer')
+
+function isGoodRecommendation(user, product) {
+
+  const purchased = user.mostRecentPurchase
+
+  const isRecommended = (purchased.category !== product.category) && (purchased.color == product.color) && (product.price < purchased.price)
+
+  return {
+    customerName: user.username,
+    productColor: product.color,
+    isProductRecommended: isRecommended
+  }
+}*/
+
+/*function myStr(str) {
+
+  let notWord = 'not ' + str
+  //console.log(notWord)
+  if ( str.length() >= 3 && str.substring(0, 3).equals('not') ){
+
+  return str
+
+  } else {
+
+    return 'not ' + str
+
+  }
+
+}console.log(myStr('not faszom'))*/
+
+function myStr(mystring) {
+
+let mySt = mystring.split('/r').join('/')
+
+return mySt
+}
+console.log(myStr('faszomr/'))
+
+function remove(str, n){
+
+
+
+let newWord = str.substring(0, n) + str.substring(n + 1);
+
+console.log(newWord)
+
+return newWord
+
+}remove('ebwe', 1)
